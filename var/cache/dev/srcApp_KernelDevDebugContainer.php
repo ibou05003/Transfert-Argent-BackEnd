@@ -16,6 +16,6 @@ if (!\class_exists(srcApp_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerEGoLixD\srcApp_KernelDevDebugContainer([
     'container.build_hash' => 'EGoLixD',
-    'container.build_id' => '2c806038',
-    'container.build_time' => 1564414271,
+    'container.build_id' => '4aa55a52',
+    'container.build_time' => 1564415629,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerEGoLixD');
