@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ApiResource()
@@ -31,6 +32,7 @@ class Partenaire
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Positive
      */
     private $ninea;
 
@@ -41,6 +43,12 @@ class Partenaire
 
     /**
      * @ORM\Column(type="bigint")
+     * @Assert\Positive
+     * @Assert\Length(
+     *      min = 11,
+     *      max = 11,
+     *      minMessage = "le numero de compte doit comporter {{ limit }} caracteres"
+     * )
      */
     private $numeroCompte;
 

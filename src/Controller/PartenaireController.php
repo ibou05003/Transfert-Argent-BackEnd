@@ -47,6 +47,7 @@ class PartenaireController extends AbstractController
                 $this->content => $this->application
             ]);
         }
+        $part->setSolde(0);
         $entityManager->persist($part);
         $entityManager->flush();
         
